@@ -16,13 +16,13 @@ pipeline {
 
         stage('Remove test.txt') {
             steps {
-                sh 'rm -f test.txt'
+                bat 'del test.txt'
             }
         }
 
         stage('Check Files') {
             steps {
-                sh 'ls -l'
+                bat 'dir'
             }
         }
     }
